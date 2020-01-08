@@ -102,7 +102,7 @@ export class EventsListComponent {
       time: '9:00 am',
       price: 950.00,
       imageUrl: '/assets/images/ng-nl.png',
-      onlineURL: "http://ng-nl.org",
+      onlineUrl: "http://ng-nl.org",
       sessions: [
         {
           id: 1,
