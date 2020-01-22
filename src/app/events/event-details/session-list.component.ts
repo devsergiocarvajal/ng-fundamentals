@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ISession } from '../shared';
 
 @Component({
@@ -6,10 +6,6 @@ import { ISession } from '../shared';
   templateUrl: './session-list.component.html'
 })
 
-export class SessionListComponent implements OnInit {
+export class SessionListComponent {
   @Input() sessions: ISession[];
-
-  constructor() { }
-
-  ngOnInit() { }
 }
