@@ -20,7 +20,8 @@ import {
   EventListResolver,
   CreateEventComponent,
   CreateSessionComponent,
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events/index';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -42,7 +43,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateSessionComponent,
     SessionListComponent,
     Error404Component,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   providers: [
     EventService,
