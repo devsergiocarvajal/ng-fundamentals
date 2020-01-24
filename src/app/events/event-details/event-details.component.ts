@@ -16,6 +16,7 @@ export class EventDetailsComponent implements OnInit {
     event: IEvent;
     addMode: boolean;
     filterBy: string = 'all';
+    sortBy: string = 'votes';
 
     constructor(@Inject(EventService) private eventService,@Inject(ActivatedRoute) private route: ActivatedRoute) { }
 
