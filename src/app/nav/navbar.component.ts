@@ -17,15 +17,15 @@ export class NavBarComponent {
   foundSessions: ISession[];
 
 
-  constructor(@Inject(AuthService) private auth: AuthService, @Inject(EventService) private eventService: EventService) {
-
+  constructor(@Inject(AuthService) private auth: AuthService,
+              @Inject(EventService) private eventService: EventService) {
   }
 
   searchSessions(searchTerm) {
     this.eventService.searchSessions(searchTerm).subscribe(sessions => {
         this.foundSessions = sessions;
         console.log(this.foundSessions);
-    })
+    });
 }
 
 }
