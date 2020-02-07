@@ -21,7 +21,7 @@ export class AuthService {
           }))
            .pipe(catchError(err => {
                return of(false);
-           }))
+           }));
 
       // this.currentUser = {
       //     id: 1,
@@ -38,5 +38,14 @@ export class AuthService {
     updateCurrentUser(firstName: string, lastName: string) {
         this.currentUser.firstName = firstName;
         this.currentUser.lastName = lastName;
+    }
+
+    checkAuthenticationStatus() {
+        this.http.get('/api/currentIdentity')
+          .pipe(tap(data => {
+            if (data instanceof Object) {
+              this.currentUser = data as IUser;
+            }
+          })).subscribe();
     }
 }
