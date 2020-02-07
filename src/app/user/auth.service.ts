@@ -41,7 +41,7 @@ export class AuthService {
 
         const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
-       return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options);
+        return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options);
     }
 
     checkAuthenticationStatus() {
@@ -51,5 +51,11 @@ export class AuthService {
               this.currentUser = data as IUser;
             }
           })).subscribe();
+    }
+
+    logout() {
+      this.currentUser = undefined;
+      const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+      return this.http.post('/api/logout', {}, options);
     }
 }
