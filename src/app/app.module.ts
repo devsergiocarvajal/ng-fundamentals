@@ -35,7 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 declare let toastr: Toastr;
-let jQuery = window['$'];
+const jQuery = window.$;
 
 @NgModule({
   imports: [

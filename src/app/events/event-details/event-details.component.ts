@@ -15,14 +15,14 @@ import { IEvent, ISession } from '../shared/index';
 export class EventDetailsComponent implements OnInit {
     event: IEvent;
     addMode: boolean;
-    filterBy: string = 'all';
-    sortBy: string = 'votes';
+    filterBy = 'all';
+    sortBy = 'votes';
 
-    constructor(@Inject(EventService) private eventService,@Inject(ActivatedRoute) private route: ActivatedRoute) { }
+    constructor(@Inject(EventService) private eventService, @Inject(ActivatedRoute) private route: ActivatedRoute) { }
 
     ngOnInit() {
       this.route.data.forEach((data) => {
-        this.event = data['event'];
+        this.event = data.event;
         this.addMode = false;
       });
     }

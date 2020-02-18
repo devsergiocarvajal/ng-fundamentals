@@ -5,7 +5,7 @@ import { AuthService } from '../../user/auth.service';
 import { VoterService } from './voter.service';
 import { ISession } from '../shared/event.model';
 import { By } from '@angular/platform-browser';
-//import { UpvoteComponent } from './upvote.component';
+// import { UpvoteComponent } from './upvote.component';
 import { DurationPipe } from '../shared';
 import { CollapsibleWellComponent } from 'src/app/common';
 
@@ -17,11 +17,11 @@ describe('SessionListComponent', () => {
   let debugEl: DebugElement;
 
   beforeEach(async(() => {
-    let mockAuthService = {
+    const mockAuthService = {
       isAuthenticated: () => true,
       currentUser: { userName: 'Joe'}
     };
-    let mockVoterService = {
+    const mockVoterService = {
       userHasVoted: () => true
     };
 
